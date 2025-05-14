@@ -1,13 +1,7 @@
 #!/bin/bash
 
 # Lire trois valeurs sur une seule ligne
-read -p "Entrez deux nombres et un opérateur (ex: 5 3 +) : " a b op
-
-# Vérifie que les deux premières valeurs sont bien des entiers
-if ! [[ "$a" =~ ^-?[0-9]+$ && "$b" =~ ^-?[0-9]+$ ]]; then
-  echo "Erreur : les deux premières valeurs doivent être des nombres entiers."
-  exit 1
-fi
+read -p "Entrez deux nombres et un opérateur (ex: 5 3 +) :" a b op
 
 # Bloc conditionnel pour traiter chaque opérateur
 if [ "$op" = "+" ]; then
