@@ -11,15 +11,8 @@ elif [ "$op" = "-" ]; then
 elif [ "$op" = "*" ]; then
   resultat=$((a * b))
 elif [ "$op" = "/" ]; then
-  if [ "$b" -eq 0 ]; then
-    echo "Erreur : division par zéro non autorisée."
-    exit 1
+ resultat=$((a / b))
   fi
-  resultat=$((a / b))
-else
-  echo "Erreur : opérateur invalide. Utilisez +, -, *, ou /"
-  exit 1
-fi
-
+  
 # Affichage du résultat
 echo "Résultat : $resultat"

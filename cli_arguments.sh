@@ -1,9 +1,16 @@
 #!/bin/bash
-i=1  # Initialisation de la variable i à 1, qui servira à compter les arguments
+#!/bin/bash
 
-# Boucle for pour parcourir tous les arguments passés au script
-for arg in "$@"; do
-    echo "Argument $i : $arg"  # Affichage de l'argument actuel avec son numéro (i)
-    ((i++))  # Incrémentation de la variable i pour le prochain argument
+# Demande à l'utilisateur d'entrer plusieurs valeurs
+read -a arguments
+
+# Initialisation du compteur
+i=1
+
+# Parcours du tableau 'arguments' avec une boucle
+for arg in "${arguments[@]}"; do
+    echo "Argument $i : $arg"  # Affiche l'indice et la valeur
+    ((i++))  # Incrémente le compteur
 done
+
 
