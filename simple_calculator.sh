@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 read a b op
 
 if [ "$op" = "+" ];then 
